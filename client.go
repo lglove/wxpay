@@ -175,7 +175,8 @@ func (c *Client) processResponseXml(xmlStr string) (Params, error) {
 	if params.ContainsKey("return_code") {
 		returnCode = params.GetString("return_code")
 	} else {
-		return nil, errors.New("no return_code in XML")
+		return params, errors.New("no return_code in XML")
+		//return nil, errors.New("no return_code in XML")
 	}
 	if returnCode == Fail {
 		return params, nil

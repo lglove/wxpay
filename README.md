@@ -29,14 +29,14 @@ wxpay 提供了以下的方法：
 ## 安装
 
 ```bash
-$ go get github.com/objcoding/wxpay
+$ go get github.com/lglove/wxpay
 
 ```
 
 ## go modules
 ```cgo
 // go.mod
-require github.com/objcoding/wxpay v1.0.5
+require github.com/lglove/wxpay v1.0.5
 
 ```
 
@@ -75,7 +75,7 @@ params.SetString("body", "test").
 		SetString("out_trade_no", "436577857").
 		SetInt64("total_fee", 1).
 		SetString("spbill_create_ip", "127.0.0.1").
-		SetString("notify_url", "http://notify.objcoding.com/notify").
+		SetString("notify_url", "http://notify.lglove.com/notify").
 		SetString("trade_type", "APP")
 p, _ := client.UnifiedOrder(params)
 
@@ -127,7 +127,7 @@ return wxpay.Notifies{}.NotOK("支付失败或退款失败了")
 
 ```
 
-![objcoding](https://raw.githubusercontent.com/objcoding/objcoding.github.io/master/images/official_accounts.jpg)
+![lglove](https://raw.githubusercontent.com/lglove/lglove.github.io/master/images/official_accounts.jpg)
 
 
 ## License
